@@ -1,0 +1,58 @@
+package cn.chiu.haveatry.JVM.JMM;
+
+/**
+ * Created by yeachiu on 2019/6/13.
+ *
+ * 测试volatile在并发下的不安全问题[可见性、原子性问题]
+ */
+public class Volatile_Visibility {
+
+    public static volatile int race = 0 ;
+
+    public static void increase() {
+        race ++;
+        System.out.println(race);
+    }
+
+    public static final int THREADS_COUNT = 10;
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Thread[] threads = new Thread[THREADS_COUNT];
+
+        for (int i = 0; i < THREADS_COUNT; i++){
+            threads[i] = new Thread( new Runnable() {
+                @Override
+                public void run() {
+                    for (int i = 0; i < 100; i++){
+                        increase();
+                    }
+                }
+            });
+            threads[i].start();
+        }
+
+        // 此方法返回活动线程的当前线程的线程组中的数量
+        while (Thread.activeCount() > 2) {
+            // 让出当前线程的CPU资源
+            Thread.yield();
+
+        }
+        System.out.println("======================>" + race);
+    }
+}
+/**
+ * 失蒜了……多次测试发现绝大部分并发还是正常的
+ *
+ * 但还是说一下不安全的情况吧-->
+ *  因为Java运算的非原子操作，导致基于volatile变量的运算在并发下并不是安全的。
+ *
+ *  volatile修饰的变量的修改对其他线程立即可见的原理：
+ *     本线程的工作内存写入主内存，该写入动作会引起别的CPU/线程工作内存中该变量值的无效化。
+ *     所以线程每次使用该变量前都要先刷新，执行引擎看不到不一致的情况，因此可以认为volatile变量不存在一致性问题。
+ *
+ *  volatile变量 只能保证变量的可见性，在不符合以下两条规则的运算场景中，仍需要通过加锁(使用synchronized或java.util.concurrent中的原子类)来保证原子性。
+ *      · 运算结果并不依赖变量的当前值，或者能够确保只有单一的线程修改变量的值。
+ *      · 变量不需要与其他的状态变量共同参与不变约束。
+ */
+
