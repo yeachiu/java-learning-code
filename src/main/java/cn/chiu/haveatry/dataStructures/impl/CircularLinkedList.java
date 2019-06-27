@@ -61,18 +61,14 @@ public class CircularLinkedList<E> {
     public boolean insert(int i, E e) {
         if (i < 1 || i > size + 1) //插入位置不合理
             return false;
-        Node<E> newNode = null;
-        if (get(i) == null) {  //表尾插入
-            newNode = new Node<>(e,first);
-            get(i-1).next = newNode;
-        }else{
-            newNode = new Node<>(e);
-            Node prev = get(i-1);
-            newNode.next = prev.next;
-            prev.next = newNode;
-
-        }
-
+        Node<E> newNode = new Node<>(e);
+        Node prevNode = null;
+        if (i == 1)
+            prevNode = get(size);
+        else
+            prevNode = get(i-1);
+        newNode.next = prevNode.next;
+        prevNode.next = newNode;
         this.size++;
         return true;
     }
@@ -84,7 +80,7 @@ public class CircularLinkedList<E> {
     public int locate(E e) {
         Node<E> node = first;
         int p = 1;
-        while (node.next != null) {
+        while (node.next != first) {
             if (node.data == e)
                 return p;
             node = node.next;
@@ -165,6 +161,7 @@ public class CircularLinkedList<E> {
         System.out.println("insert:" + linkedList.insert("sam"));
         System.out.println("insert:" + linkedList.insert("shi"));
         linkedList.print();
+        System.out.println("locate sam: " + linkedList.locate("sam"));
         System.out.println("delete:" + linkedList.delete(4));
         linkedList.print();
         System.out.println("delete:" + linkedList.delete(2));
