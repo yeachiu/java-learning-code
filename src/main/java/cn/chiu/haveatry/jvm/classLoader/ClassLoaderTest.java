@@ -1,4 +1,4 @@
-package cn.chiu.jvm.classLoader;
+package cn.chiu.haveatry.jvm.classLoader;
 
 import java.io.IOException;
 import java.io.InputStream;

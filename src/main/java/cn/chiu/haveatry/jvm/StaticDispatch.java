@@ -1,4 +1,4 @@
-package cn.chiu.jvm;
+package cn.chiu.haveatry.jvm;
 
 /**
  * Created by yeachiu on 2019/6/6.

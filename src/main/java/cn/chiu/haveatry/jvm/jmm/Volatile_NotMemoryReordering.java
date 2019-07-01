@@ -1,7 +1,4 @@
-package cn.chiu.jvm.jmm;
-
-import java.util.HashMap;
-import java.util.Map;
+package cn.chiu.haveatry.jvm.jmm;
 
 /**
  * Created by yeachiu on 2019/6/14.

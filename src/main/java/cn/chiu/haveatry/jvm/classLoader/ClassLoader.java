@@ -1,4 +1,4 @@
-package cn.chiu.jvm.classLoader;
+package cn.chiu.haveatry.jvm.classLoader;
 
 /**
  * Created by yeachiu on 2019/6/12.

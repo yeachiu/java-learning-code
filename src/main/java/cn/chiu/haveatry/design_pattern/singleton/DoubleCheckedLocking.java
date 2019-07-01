@@ -1,4 +1,4 @@
-package cn.chiu.design_pattern.singleton;
+package cn.chiu.haveatry.design_pattern.singleton;
 
 /**
  * Created by yeachiu on 2019/6/14.

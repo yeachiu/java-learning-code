@@ -1,4 +1,4 @@
-package cn.chiu.jvm.gc;
+package cn.chiu.haveatry.jvm.gc;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.WeakReference;
