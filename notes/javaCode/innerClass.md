@@ -371,7 +371,7 @@
        
        }
        ```
-       ######  [InnerClassUpcasting.java](#使用内部类向上转型)的变体
+       ######  [InnerClassUpcasting.java](#获取指向基类或接口的引用)的变体
        </details>
    
    - 在任意作用域内嵌入一个内部类
