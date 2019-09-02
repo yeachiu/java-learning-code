@@ -42,7 +42,7 @@ public class ClassLoaderTest {
         Object obj = myLoader.loadClass("cn.chiu.haveatry.JVM.classLoader.ClassLoaderTest").newInstance();
 
         System.out.println(obj.getClass());
-        System.out.println(obj instanceof cn.chiu.haveatry.JVM.classLoader.ClassLoaderTest);
+        System.out.println(obj instanceof cn.chiu.haveatry.jvm.classLoader.ClassLoaderTest);
 
         /**
          * 此时虚拟机中存在着两个ClassLoaderTest类，一个由系统应用程序类加载器加载，一个由我们自定义的类加载器加载。
