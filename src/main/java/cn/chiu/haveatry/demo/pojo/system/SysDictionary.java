@@ -14,17 +14,17 @@ public class SysDictionary extends Schema implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	private String parentId;	//
+	private String parentId;
 	
-	private String dictCode;	//
+	private String dictCode;
 	
-	private String dictName;	//
+	private String dictName;
 	
-	private String dictValue;	//
+	private String dictValue;
 	
-	private Integer sort;	//
+	private Integer sort;
 	
-	private String remark;	//
+	private String remark;
 	
 	//////////////////////////////////////////////////////////////////
 

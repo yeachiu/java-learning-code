@@ -23,7 +23,7 @@ public class SysUser implements Serializable  {
 
 //////////////////////////////////////////////////////////////
 
-    private List<SysRole> roles;
+    private List<cn.chiu.haveatry.demo.pojo.system.SysRole> roles;
     private Integer authStatus;
 
 }
