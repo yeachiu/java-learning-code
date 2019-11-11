@@ -51,7 +51,7 @@
           private class SequenceSelector implements Selector {
               private int i = 0;
               public boolean end() {
-                  return i == items.length;
+                  return i == items.length;   //访问外围类私有属性
               }
               public Object current() {
                   return items[i];

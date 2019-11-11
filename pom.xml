@@ -116,6 +116,18 @@
       <artifactId>spring-boot-autoconfigure</artifactId>
       <version>1.5.12.RELEASE</version>
     </dependency>
+      <dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-core</artifactId>
+          <version>5.1.5.RELEASE</version>
+          <scope>test</scope>
+      </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>0.9.1</version>
+      <scope>test</scope>
+    </dependency>
 
   </dependencies>
 

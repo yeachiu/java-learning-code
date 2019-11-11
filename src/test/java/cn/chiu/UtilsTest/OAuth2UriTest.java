@@ -7,8 +7,8 @@ import java.net.URLEncoder;
 public class OAuth2UriTest {
 
     public static final String BASE_URI = "https://open.weixin.qq.com/connect/oauth2/authorize?";
-    public static final String CORPID = "wxdd725338566d6ffe";
-    public static final String REDIRECT_URI = "https://dcslife.qinxuan.honor.cn/hscrm/enterprise/index.html?from=groupmessage#/";
+    public static final String CORPID = "ww81b13801f9314220";
+    public static final String REDIRECT_URI = "https://hscrm.ac-diary.cn/hscrm/management/devlogin/index.html";
     public static final String RESPONSE_TYPE = "code";
     public static final String SCOPE = "snsapi_base";
     public static final String STATE = "#wechat_redirect";
