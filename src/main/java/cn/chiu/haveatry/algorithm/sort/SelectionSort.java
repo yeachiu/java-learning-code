@@ -10,8 +10,9 @@ public class SelectionSort {
         for (int i = 0; i < N; i++){
             int min = i;
             for (int j = i + 1; j < N; j++){
-                if (less(a[j],a[i]))
+                if (less(a[j],a[i])) {
                     min = j;
+                }
                 exch(a,i,min);
             }
         }

@@ -32,7 +32,7 @@ public class RequestLimitAspect {
 
     private static long lastRefeshTimeMillis;
 
-    @Pointcut(value = "@annotation(com.isoftstone.hscrm.applet.common.annotation.RequestLimit)")
+    @Pointcut(value = "@annotation(cn.chiu.haveatry.mydemo.requestlimit.demo_aspect.RequestLimit)")
     public void limit(){}
 
     @AfterReturning("limit()")

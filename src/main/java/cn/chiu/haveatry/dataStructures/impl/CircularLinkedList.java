@@ -43,8 +43,9 @@ public class CircularLinkedList<E> {
     }
 
     public void clear() {
-        if (isEmpty())
+        if (isEmpty()) {
             return;
+        }
         Node oldFirst = first;
         while (first.next != oldFirst) {
             first = first.next;
@@ -60,13 +61,16 @@ public class CircularLinkedList<E> {
 
     public boolean insert(int i, E e) {
         if (i < 1 || i > size + 1) //插入位置不合理
+        {
             return false;
+        }
         Node<E> newNode = new Node<>(e);
         Node prevNode = null;
-        if (i == 1)
+        if (i == 1) {
             prevNode = get(size);
-        else
+        } else {
             prevNode = get(i-1);
+        }
         newNode.next = prevNode.next;
         prevNode.next = newNode;
         this.size++;
@@ -81,8 +85,9 @@ public class CircularLinkedList<E> {
         Node<E> node = first;
         int p = 1;
         while (node.next != first) {
-            if (node.data == e)
+            if (node.data == e) {
                 return p;
+            }
             node = node.next;
             p++;
         }
@@ -90,10 +95,13 @@ public class CircularLinkedList<E> {
     }
 
     public Node<E> get(int i) {
-        if (i < 1 || i > this.size)
+        if (i < 1 || i > this.size) {
             return  null;
+        }
         if (i == 1)     //头结点
+        {
             return first;
+        }
         Node<E> node = first;
         int p = 1;
         while (p < i) {
@@ -105,8 +113,9 @@ public class CircularLinkedList<E> {
 
     public E delete(int i) {
         E e = null;
-        if (i < 1 || i > size)
+        if (i < 1 || i > size) {
             return null;
+        }
         if (i == 1) {//删除头结点
             e = first.data;
             first = first.next;
@@ -125,8 +134,9 @@ public class CircularLinkedList<E> {
     }
 
     public void print() {
-        if (isEmpty())
+        if (isEmpty()) {
             return;
+        }
         Node<E> node = first;
         while (node.next != first) {
             System.out.print(node.data + " --> ");
@@ -136,15 +146,18 @@ public class CircularLinkedList<E> {
     }
 
     public boolean addAll(CircularLinkedList listB) {
-        if (listB.isEmpty() || isEmpty())
+        if (listB.isEmpty() || isEmpty()) {
             return false;
+        }
         Node last = first;
-        while (last.next != first)
+        while (last.next != first) {
             last = last.next;
+        }
         last.next = listB.first;
         last = listB.first;
-        while (last.next != listB.first)
+        while (last.next != listB.first) {
             last = last.next;
+        }
         last.next = first;
         return true;
     }
