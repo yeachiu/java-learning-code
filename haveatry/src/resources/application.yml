@@ -1,0 +1,4 @@
+rocketmq:
+  name-server: 91.216.169.95:9876
+  producer:
+    group: my-group
