@@ -1,0 +1,7 @@
+课程：https://time.geekbang.org/column/article/335204
+  前世今生
+  解决高可用与数据一致性问题：单副本存在故障 / 多副本引入数据一致性问题
+    共识算法：https://www.sohu.com/a/258607640_100195591，https://www.jdon.com/47927
+      Raft算法：https://zhuanlan.zhihu.com/p/66441389，https://zhuanlan.zhihu.com/p/112651338
+        leader选举、日志同步、安全性
+      
