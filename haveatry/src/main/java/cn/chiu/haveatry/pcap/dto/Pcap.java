@@ -11,7 +11,7 @@ import java.util.List;
  * @date 2023/3/22
  */
 @Data
-public class Pacp {
+public class Pcap {
     private PcapHeader header;
     private List<PcapData> data;
 

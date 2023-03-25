@@ -9,13 +9,11 @@ import lombok.Data;
  */
 @Data
 public class PcapHeader {
-    private byte[] magic; // 4B
-    private byte[] majorVersion; // 2B
-    private byte[] minorVersion; // 2B
-    private byte[] thisZone; // 4B
-    private byte[] sigFlgs; // 4B
-    private byte[] snapLen; // 4B
-    private byte[] linkType; // 4B
-
-
+    private int magic; // 4B
+    private short majorVersion; // 2B
+    private int minorVersion; // 2B
+    private int thisZone; // 4B
+    private int sigFlgs; // 4B
+    private int snapLen; // 4B
+    private int linkType; // 4B
 }
