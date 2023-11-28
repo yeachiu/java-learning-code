@@ -5,7 +5,7 @@ package cn.chiu.haveatry.javaUtil;
  * 路径通配符匹配,支持前后、中间匹配
  * </p>
  *
- * @author Jolene
+ * @author Yeachiu
  * @date 2023/11/23
  */
 public class PathMatcher {
